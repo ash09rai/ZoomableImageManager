@@ -1,1 +1,1 @@
-@_exported import ImagePagerKitCore
+@_exported import ZoomableImageManagerCore

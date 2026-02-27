@@ -3,7 +3,7 @@ import Foundation
 import ImageIO
 import Testing
 import UniformTypeIdentifiers
-@testable import ImagePagerKitCore
+@testable import ZoomableImageManagerCore
 
 struct ImagePagerPipelineTests {
     @Test

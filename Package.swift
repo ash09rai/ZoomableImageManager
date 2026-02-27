@@ -3,20 +3,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "ImagePagerKit",
+    name: "ZoomableImageManager",
     platforms: [
         .iOS(.v16),
         .macOS(.v13),
     ],
     products: [
         .library(
-            name: "ImagePagerKit",
-            targets: ["ImagePagerKit"]
+            name: "ZoomableImageManager",
+            targets: ["ZoomableImageManager"]
         ),
     ],
     targets: [
         .target(
-            name: "ImagePagerKitCore",
+            name: "ZoomableImageManagerCore",
             path: "Sources/ImagePagerKit",
             sources: [
                 "Cache/DiskImageCache.swift",
@@ -28,13 +28,14 @@ let package = Package(
             ]
         ),
         .target(
-            name: "ImagePagerKit",
-            dependencies: ["ImagePagerKitCore"],
+            name: "ZoomableImageManager",
+            dependencies: ["ZoomableImageManagerCore"],
             path: "Sources/ImagePagerKitUI"
         ),
         .testTarget(
-            name: "ImagePagerKitTests",
-            dependencies: ["ImagePagerKitCore"]
+            name: "ZoomableImageManagerTests",
+            dependencies: ["ZoomableImageManagerCore"],
+            path: "Tests/ImagePagerKitTests"
         ),
     ]
 )

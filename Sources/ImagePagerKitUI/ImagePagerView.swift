@@ -1,4 +1,4 @@
-import ImagePagerKitCore
+import ZoomableImageManagerCore
 import SwiftUI
 
 public struct DefaultImagePagerPlaceholder: View {

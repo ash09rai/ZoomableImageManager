@@ -1,6 +1,6 @@
-# ImagePagerKit
+# ZoomableImageManager
 
-`ImagePagerKit` is a SwiftUI-first image pager for iOS 16+ that loads authenticated remote JPEG/PNG images, opens the current image into a fullscreen zoom overlay, and keeps cache state strictly isolated per user scope.
+`ZoomableImageManager` is a SwiftUI-first image pager for iOS 16+ that loads authenticated remote JPEG/PNG images, opens the current image into a fullscreen zoom overlay, and keeps cache state strictly isolated per user scope.
 
 ## Features
 
@@ -14,10 +14,18 @@
 
 ## Installation
 
-Add the package and import the module:
+Add the package dependency and import the module:
 
 ```swift
-import ImagePagerKit
+dependencies: [
+    .package(url: "https://github.com/ash09rai/ZoomableImageManager.git", from: "1.0.0")
+]
+```
+
+Then import:
+
+```swift
+import ZoomableImageManager
 ```
 
 Run the test suite with:
@@ -30,7 +38,7 @@ swift test --enable-swift-testing
 
 ```swift
 import SwiftUI
-import ImagePagerKit
+import ZoomableImageManager
 
 struct GalleryView: View {
     let urls: [URL]
@@ -48,7 +56,7 @@ struct GalleryView: View {
 
 ## Authenticated Usage
 
-Inject authentication on the client side. `ImagePagerKit` never stores tokens and never uses headers as part of the cache key.
+Inject authentication on the client side. `ZoomableImageManager` never stores tokens and never uses headers as part of the cache key.
 
 ```swift
 ImagePagerView(

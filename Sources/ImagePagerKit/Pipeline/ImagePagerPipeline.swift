@@ -183,7 +183,7 @@ public actor ImagePagerPipeline {
         let baseDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
             ?? FileManager.default.temporaryDirectory
 
-        return baseDirectory.appending(path: "ImagePagerKitCache", directoryHint: .isDirectory)
+        return baseDirectory.appending(path: "ZoomableImageManagerCache", directoryHint: .isDirectory)
     }
 
     private func evictMemoryForPressure() async {
